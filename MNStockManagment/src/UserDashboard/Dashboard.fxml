@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700" prefWidth="1100" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="UserDashboard.DashboardController">
+
+    <!-- MENU BAR -->
+    <MenuBar prefWidth="1100">
+        <Menu text="Export" />
+    </MenuBar>
+
+    <!-- SEARCH + FILTER -->
+    <Label layoutX="85.0" layoutY="43.0" text="Choose Feature:" />
+    <ComboBox fx:id="cmbFeature" layoutX="176.0" layoutY="39.0" prefHeight="26.0" prefWidth="124.0" />
+    <TextField fx:id="txtSearch" layoutX="307.0" layoutY="39.0" prefHeight="26.0" prefWidth="597.0" promptText="Enter search..." />
+    <Button layoutX="910.0" layoutY="39.0" onAction="#onSearchClicked" text="Search" />
+    <Button layoutX="973.0" layoutY="39.0" onAction="#onClearClicked" text="Clear" />
+
+    <!-- SIDE BUTTONS -->
+    <Button fx:id="btnAddIncoming" layoutX="20.0" layoutY="116.0" onAction="#onAddIncoming" prefHeight="90.0" prefWidth="130" text="Add Incoming" />
+    <Button fx:id="btnAddOutgoing" layoutX="20.0" layoutY="227.0" onAction="#onAddOutgoing" prefHeight="90.0" prefWidth="130" text="Add Outgoing" />
+    <Button fx:id="btnAddWarranty" layoutX="20.0" layoutY="347.0" onAction="#onAddWarranty" prefHeight="90.0" prefWidth="130" text="Add Warranty" />
+
+    <!-- TABPANE -->
+    <TabPane fx:id="mainTabPane" layoutX="180.0" layoutY="80.0" prefHeight="36.0" prefWidth="890">
+        <Tab text="Incomings" closable="false" />
+<Tab text="Outgoings" closable="false" />
+<Tab text="Stock" closable="false" />
+<Tab text="Warranty" closable="false" />
+<Tab text="Customers" closable="false" />
+<Tab text="Providers" closable="false" />
+
+    </TabPane>
+
+    <!-- TABLEVIEW -->
+    <TableView fx:id="mainTable" layoutX="180" layoutY="115.0" prefHeight="555.0" prefWidth="890" />
+   <Button layoutX="14.0" layoutY="563.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="105.0" text="Return" />
+   <Button layoutX="13.0" layoutY="619.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="106.0" text="Settings" />
+
+</AnchorPane>

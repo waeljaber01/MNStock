@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserDashboard.AddIncomingController" prefWidth="700" prefHeight="500">
+
+    <Label text="Phone Name" layoutX="20" layoutY="20"/>
+    <TextField fx:id="txtPhoneName" layoutX="120" layoutY="20"/>
+
+    <Label text="Color" layoutX="20" layoutY="60"/>
+    <TextField fx:id="txtColor" layoutX="120" layoutY="60"/>
+
+    <Label text="Size" layoutX="20" layoutY="100"/>
+    <TextField fx:id="txtSize" layoutX="120" layoutY="100"/>
+
+    <Label text="Authorized" layoutX="20" layoutY="140"/>
+    <ComboBox fx:id="cmbAuthorized" layoutX="120" layoutY="140" prefWidth="120"/>
+
+    <Label text="Supplier" layoutX="20" layoutY="180"/>
+    <ComboBox fx:id="cmbSupplier" layoutX="120" layoutY="180" prefWidth="200"/>
+
+    <Label text="Date" layoutX="20" layoutY="220"/>
+    <DatePicker fx:id="datePicker" layoutX="120" layoutY="220"/>
+
+    <Label text="Quantity" layoutX="20" layoutY="260"/>
+    <TextField fx:id="txtQuantity" layoutX="120" layoutY="260"/>
+
+    <Button text="Add" layoutX="120" layoutY="310" onAction="#onAddClicked"/>
+    <Button text="Save All to DB" layoutX="200" layoutY="310" onAction="#onSaveClicked"/>
+
+    <TableView fx:id="tempTable" layoutX="20" layoutY="360" prefWidth="660" prefHeight="130"/>
+</AnchorPane>
